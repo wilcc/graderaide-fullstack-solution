@@ -57,7 +57,7 @@ const Student = (name, course, term = 1,grade='none') => {
         let sum = 0;
         for (const grade of grades) {
         sum += grade.score;
-        console.log(sum)
+
         }
 
         return sum / grades.length;
@@ -135,7 +135,13 @@ document.querySelector('.changeBtn').addEventListener('click',function(){
     let wrongName = 0
     for(const student of stus){
         if (searchName===student.name && searchCourse===student.course && searchTerm===student.term){
-            student.courses[0].terms[searchTerm-1].addGrade(assignment,Number(gradeEntered))
+            let courseIndex = 0
+            for(let i = 0;i<student.courses.length;i++){
+                if(searchCourse===student.courses[i]){
+                    courseIndex=i
+                }
+            }
+            student.courses[courseIndex].terms[searchTerm-1].addGrade(assignment,Number(gradeEntered))
             student.grade = student.getAverage()
         }else if(searchName === student.name && searchCourse !== student.course){
             alert(`${student.name} is not enrolled in this course`)
