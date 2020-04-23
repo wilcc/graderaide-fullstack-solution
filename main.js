@@ -162,3 +162,12 @@ document.querySelector('.addTerm').addEventListener('click',function(){
         }
     }
 })
+document.querySelector('.addCourse').addEventListener('click',function(){
+    const searchName = document.querySelector('.searchVal').value
+    const searchCourse = document.querySelector('.courseChoice').value
+    for(const student of stus){
+        if (searchName===student.name && searchCourse !==student.course){
+            student.addCourse(searchCourse)
+        }
+    }
+})
