@@ -135,7 +135,7 @@ document.querySelector('.changeBtn').addEventListener('click',function(){
     let wrongName = 0
     for(const student of stus){
         if (searchName===student.name && searchCourse===student.course && searchTerm===student.term){
-            student.courses[0].terms[0].addGrade(assignment,Number(gradeEntered))
+            student.courses[0].terms[searchTerm-1].addGrade(assignment,Number(gradeEntered))
             student.grade = student.getAverage()
         }else if(searchName === student.name && searchCourse !== student.course){
             alert(`${student.name} is not enrolled in this course`)
@@ -152,4 +152,13 @@ document.querySelector('.changeBtn').addEventListener('click',function(){
     }
         clearList()
         printList(stus)
+})
+document.querySelector('.addTerm').addEventListener('click',function(){
+    const searchName = document.querySelector('.searchVal').value
+    const searchCourse = document.querySelector('.courseChoice').value
+    for(const student of stus){
+        if (searchName===student.name && searchCourse===student.course &&student.courses[0].terms.length<3){
+            student.courses[0].addTerm()
+        }
+    }
 })
