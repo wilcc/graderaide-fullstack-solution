@@ -1,0 +1,67 @@
+<html lang="en">
+  <head>
+    <title>Graderaide</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./style.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <section class="app">
+
+      <section class="new-student-input">
+        <h1>New Student</h1>
+          <section>
+            <label for="new-student-name">Student Name</label> 
+            <input type="text" class="new-student-name" name="new-student-name">
+          </section>
+          <section>
+            <label for="new-student-course">Course</label>
+            <select class="new-student-course" name="new-student-course">
+              <option value ='WDI'>WDI</option>
+              <option value ='Python'>Python</option>
+            </select>
+          </section>
+          <section>
+            <label for="new-student-term">Term</label>
+              <select class="new-student-term" name="new-student-term">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            <button type="submit" class="new-student-button">Create New Student</button>
+          </section>  
+      </section>
+      <section class="new-student-submit">
+      </section>
+    
+      <section class="student-display">
+      </section>
+    </section>
+    <button class="open-button" onclick="openForm()">Open Form</button>
+    <div class="form-popup" id="myForm">
+      <form  class="form-container">
+        <h3>Student</h3>
+        
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Enter Name" class='searchVal' required>
+        <label for="name"><b>Assignment</b></label>
+        <input type="text" placeholder="Enter Assignment" class='assign' >
+        <label for="grd"><b>Grade</b></label>
+        <input type="number" placeholder="Enter Grade" class='enteredGrade'">
+        <select class="courseChoice" name="courseChoice">
+          <option value ='WDI'>WDI</option>
+          <option value ='Python'>Python</option>
+        </select>
+        <select class="termChoice" name="termChoice">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <button type="button" class="changeBtn">Change</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

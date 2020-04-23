@@ -1,0 +1,159 @@
+body{
+    background-image: url(./pexels-photo-733857.jpeg);
+    background-size: cover;
+    color: #001427;
+}
+.new-student-input{
+    text-align: center;
+}
+/* .new-student-input input[type=text]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+} */
+
+
+.student-info{
+    text-align: center;
+    width: 400px;
+    list-style: none;
+}
+
+.student-display{
+    padding-left: 6%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+@media (max-width:1335px){
+body{
+
+}
+.new-student-input{
+    text-align: center;
+}
+.new-student-name{
+
+}
+.new-student-course{
+
+}
+.student-info{
+
+}
+}
+@media (max-width:1000px){
+    body{
+        color: brown;
+        background-image: url(./pngtree-exam-study-student-background-image_247270.jpg);
+        background-size: cover;
+        /* background-repeat: inherit; */
+    }
+    .app{
+        padding-left: 35%;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .new-student-input{
+
+        width: 200px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .new-student-course{
+        display: flex;
+
+        width: 200px;
+
+    }
+    .student-info{
+        text-align: left;
+        padding-left: 0%;
+    }
+}
+
+
+
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+
+
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+
+.form-container input[type=text], .form-container input[type=number] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+
+.form-container input[type=number]:focus,input[type=text]:focus{
+    background-color: #ddd;
+    outline: none;
+}
+
+
+.form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+.form-container .changeBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+.form-container .cancel {
+    background-color: red;
+}
+
+
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+
+
